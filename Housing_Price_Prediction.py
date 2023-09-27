@@ -108,3 +108,20 @@ sns.pairplot(df, x_vars=['MedInc', 'HouseAge', 'AveRooms', 'AveBedrms', 'Populat
 plt.show()
 
 # Using different visualization tools like box plot or KDE you can visualize different kinds of data. Go have fun playing with those. 
+
+# Create a DataFrame with features for a single house
+new_data = pd.DataFrame({
+    'MedInc': [6.5456],
+    'HouseAge': [57.0],
+    'AveRooms': [5.23669],
+    'AveBedrms': [1.73256],
+    'Population': [500.0],
+    'AveOccup': [2.7569],
+    'Latitude': [37.78],
+    'Longitude': [-122.23]
+})
+
+# Make a prediction for the single house
+predicted_price = model1.predict(new_data)
+print("Predicted value for given values is:",float(predicted_price))
+# 'predicted_price' now contains the predicted price for the single house
